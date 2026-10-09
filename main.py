@@ -45,7 +45,7 @@ def login_and_get_token():
     token, uuid = generate()
     print(f"初始随机token为：{token}")
 
-    url = f"https://api.xixunyun.com/login/api?token={token}&from=app&version=4.9.7&school_id={school_id}"
+    url = f"https://api.xixunyun.com/login/api?token={token}&from=app&version=5.4.3&school_id={school_id}"
 
     payload = {
         'app_version': '4.9.7',
