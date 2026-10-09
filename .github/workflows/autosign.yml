@@ -1,0 +1,32 @@
+name: autosign
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天 UTC 0 点，即北京时间 8 点
+  workflow_dispatch:
+
+jobs:
+  run_daily_task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -r requirements.txt
+
+      - run: python main.py
+        env:
+          SCHOOL_ID: ${{ secrets.SCHOOL_ID }}
+          ACCOUNT: ${{ secrets.ACCOUNT }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          LONGITUDE: ${{ secrets.LONGITUDE }}
+          LATITUDE: ${{ secrets.LATITUDE }}
+          ADDRESS: ${{ secrets.ADDRESS }}
+          ADDRESS_NAME: ${{ secrets.ADDRESS_NAME }}
+          PROVINCE: ${{ secrets.PROVINCE }}
+          CITY: ${{ secrets.CITY }}
+          PUSHPLUS_SET: ${{ secrets.PUSHPLUS_SET }}
+          PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
