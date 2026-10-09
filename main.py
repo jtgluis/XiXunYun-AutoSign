@@ -48,7 +48,7 @@ def login_and_get_token():
     url = f"https://api.xixunyun.com/login/api?token={token}&from=app&version=5.4.3&school_id={school_id}"
 
     payload = {
-        'app_version': '4.9.7',
+        'app_version': '5.4.3',
         'uuid': uuid,
         'request_source': 3,
         'platform': 2,
