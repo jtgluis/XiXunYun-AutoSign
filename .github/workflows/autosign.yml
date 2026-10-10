@@ -2,7 +2,7 @@ name: autosign
 
 on:
   schedule:
-    - cron: '37 3 * * *'  # 每天 UTC 0 点，即北京时间 8 点
+    - cron: '37 3 * * *'
   workflow_dispatch:
 
 jobs:
