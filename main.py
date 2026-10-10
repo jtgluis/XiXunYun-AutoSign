@@ -19,7 +19,7 @@ from utils.data import (
 # Server酱 推送函数
 # ==========================
 def send_serverchan(title, content):
-    sendkey = os.getenv("SERVERCHAN_SENDKEY")
+    sendkey = "SCT435821T5mnPXxe1FsJfxxuljllJRDHD"  # os.getenv("SERVERCHAN_SENDKEY")
 
     if not sendkey:
         print("未配置 SERVERCHAN_SENDKEY")
