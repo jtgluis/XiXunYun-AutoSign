@@ -2,7 +2,7 @@ name: autosign
 
 on:
   schedule:
-    - cron: '37 3 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch:
 
 jobs:
