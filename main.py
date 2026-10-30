@@ -96,7 +96,7 @@ def signin_with_token(token, cookies):
 
     time.sleep(5)
 
-    url = f"https://api.xixunyun.com/signin_rsa?token={token}&from=app&version=4.9.7&school_id={school_id}"
+    url = f"https://api.xixunyun.com/signin_rsa?token={token}&from=app&version=5.4.3&school_id={school_id}"
 
     payload = {
         'address': address,
