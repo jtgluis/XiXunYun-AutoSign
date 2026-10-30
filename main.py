@@ -84,7 +84,7 @@ def login_and_get_token():
                 return None, None
 
     except Exception as e:
-        print(f"登录异常：{e}")
+        print(f"登录异常：{e}1")
         send_serverchan("登录异常", str(e))
         return None, None
 
