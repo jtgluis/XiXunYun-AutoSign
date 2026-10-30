@@ -67,6 +67,7 @@ def login_and_get_token():
     try:
         with httpx.Client(timeout=20) as client:
             response = client.post(url, headers=headers, data=payload)
+            print(f"服务器实际返回的内容: {response.text}")
             data = response.json()
 
             if data.get('code') == 20000:
